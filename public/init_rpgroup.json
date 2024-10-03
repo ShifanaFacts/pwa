@@ -1,0 +1,101 @@
+{
+    "ver": "1.0.7",
+    "title": "Facts PWA",
+    "service": {
+      "url": "https://rpgroup.facts.ae/FQAPI/",
+      "auth": "oauth/token",
+      "report": "api/report",
+      "proc": "api/proc",
+      "authbody": {
+        "grant_type": "client_credentials",
+        "hash_method": "0",
+        "job_id": "1973"
+      }
+    },
+    "upload": {
+      "url": "https://rpgroup.facts.ae/FQAPI/",
+      "path": "api/file"
+    },
+    "login": {
+      "logo": "res/_original_images/loginpage.png",
+      "title": "",
+      "align": "center"
+    },
+    "whenload": [
+      {
+        "exec": "filldataset",
+        "args": {
+          "proc": "PWA.LoadLayout",
+          "args": {
+            "doctype": "part",
+            "docno": "global-parts"
+          },
+          "dset": "_pageparts",
+          "column": "layoutinfo"
+        }
+      }
+    ],
+    "whentimer": [
+      {
+        "interval": 15,
+        "tasks": [
+          {
+            "exec": "setdataset",
+            "args": {
+              "dset": "dsnotifs",
+              "data": null
+            }
+          },
+          {
+            "exec": "hideloader"
+          },
+          {
+            "exec": "fillmultidataset",
+            "args": {
+              "proc": "PWA.NotifMessages",
+              "dsets": [
+                {
+                  "name": "dsmessage",
+                  "table": "Table"
+                },
+                {
+                  "name": "dsmessagepopup",
+                  "table": "Table1"
+                },
+                {
+                  "name": "dsnotifs",
+                  "table": "Table2"
+                }
+              ],
+              "args": {}
+            }
+          },
+          {
+            "exec": "shownotification",
+            "args": {
+              "dset": "dsnotifs",
+              "args": {
+                "title": "[this.NOTIF_TITLE]",
+                "body": "[this.NOTIF_SUBTITLE]",
+                "whenclick": "[this.whenclick]"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "theme": {
+      "header": "#3a62ab",
+      "palette": {
+        "primary": {
+          "main": "#c70a13"
+        },
+        "secondary": {
+          "main": "#989c97"
+        }
+      },
+      "status": {
+        "danger": "orange"
+      }
+    }
+  }

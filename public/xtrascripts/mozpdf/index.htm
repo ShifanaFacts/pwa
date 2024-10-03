@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+	<script src="pdf.js"></script>
+	 <script src='render.js?ver=1'></script> 
+ 
+	<style>
+		@font-face {
+			font-family: 'Material Icons';
+			font-style: normal;
+			font-weight: 400;
+			src: url(/fonts/material-icons.woff2) format('woff2');
+		}
+
+		@media print {
+			@page {
+				/* size: 6in;   */
+				margin:0mm;
+			 
+			}
+			body,
+			html {
+				padding: 0px !important;
+				margin: 0px !important;
+			}
+
+			.noprint {
+				display: none !important;
+			}
+
+			#toPrint {
+				display: block !important;
+			}
+		}
+
+		body,
+		button {
+			background-color: #333;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			font-size: 14px;
+			color: white;
+			text-align: center;
+			user-select: none;
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			margin: 0px;
+		}
+
+		.view-container {
+			width: 100vw;
+			height: 88vh;
+			overflow: auto;
+		}
+
+		#the-canvas {
+			direction: ltr;
+		}
+
+		button {
+			font-family: 'Material Icons';
+			border-radius: 5px;
+			font-size: 24px;
+			border: 1px solid grey;
+			padding: 5px;
+			margin: 5px;
+		}
+
+		#pageCtrls {
+			height: 10vh;
+			padding: 5px;
+			display: inline-flex;
+			align-items: center;
+		}
+
+		#toPrint {
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="noprint" id="pageCtrls">
+		<button onclick="pagePrevious();">chevron_left</button>
+		<span id="pageLabel"></span>
+		<button onclick="pageNext();">chevron_right</button>
+		<button onclick="zoomIn();">zoom_out</button>
+		<button onclick="zoomOut();">zoom_in</button>
+		<button onclick="printCanvas();">print</button>
+		<button onclick="downloadPDF();">file_download</button>
+
+	</div>
+	<div class="view-container noprint">
+		<canvas id="the-canvas"></canvas>
+	</div>
+	<div id="toPrint">
+	</div>
+</body>
+
+</html>

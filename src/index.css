@@ -1,0 +1,205 @@
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+body {
+  margin: 0;
+font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+  overscroll-behavior-y: contain;
+ 
+}
+
+/* .page-wrap  *{
+  animation: fadeIn  0.3s ease-in-out;
+} */
+
+html{
+
+  font-size: 16px;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.MuiBackdrop-root{
+  background-color:transparent !important;
+
+}
+
+.MuiFab-root {
+  position: absolute !important;
+  bottom: 25px;
+  right: 25px;
+  z-index: 9;
+}
+ 
+.MuiAccordion-root.compact .MuiAccordionSummary-root{
+  min-height: 22px !important;
+}
+.MuiAccordion-root.compact .MuiAccordionSummary-content
+{
+  margin: 0 !important;
+  
+}
+.MuiAccordion-root.compact .MuiTypography-root{
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.MuiAccordion-root.compact .MuiAccordionSummary-expandIcon{
+  padding: 0px !important;
+}
+/* For highlighting controls that raise Appmenu */
+.am-parent {
+  position: relative;
+  overflow: hidden;
+}
+.am-parent:before {
+  content: ' ';
+  background: #ffffff17;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* For highlighting controls that raise Appmenu */
+
+
+ /*Control Specific*/
+
+ .factsGridBox .MuiGrid-item,
+ .factsGridHead .MuiGrid-item{
+ 
+  box-shadow: 1px 0 0 0 gainsboro, 0 1px 0 0 gainsboro, 1px 1px 0 0 gainsboro, 1px 0 0 0 gainsboro inset, 0 1px 0 0 gainsboro inset;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+.resetGridBox{
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+.factsGridHead .MuiGrid-item {
+  padding: 10px 5px;
+
+}
+.factsGridBox .MuiGrid-container:hover{
+   
+  background-color: #EFEFEF;
+  cursor: pointer;
+}
+
+.rightContent{
+  text-align: right;
+  justify-content: right;
+}
+
+.centerContent{
+  text-align: center;
+  justify-content: center;
+}
+
+ 
+
+.lvlist .lvchild.barebone{
+  border-bottom: 1px solid gainsboro;
+  height: 50px !important; 
+}
+
+/* .lvlist .lvchild > *{
+  animation: fadeIn  0.3s ease-in-out;
+} */
+
+.cursor-ptr{
+  cursor: pointer;
+}
+.highlight-me:hover{
+  filter:brightness(0.9);
+}
+.highlight-me:active{
+  filter:brightness(0.8);
+}
+
+.small-ctr input {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 0.8rem;
+
+}
+
+.small-ctr textarea {
+  font-size: 0.8rem;
+
+}
+
+.small-ctr 
+.MuiInputLabel-outlined.MuiInputLabel-marginDense
+{
+  transform: translate(14px, 7px) scale(1) !important;
+}
+.small-ctr 
+.MuiInputLabel-outlined.MuiInputLabel-shrink {
+  transform: translate(14px, -6px) scale(0.75) !important;
+}
+.small-ctr 
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+   border-width: 1px !important;
+}
+.small-ctr 
+.MuiOutlinedInput-root{
+  border-radius: 4px !important;
+}
+.small-ctr 
+.MuiFormLabel-root{
+  font-size: 0.9rem;
+    -webkit-transform: translate(14px, 7px) scale(1) !important;
+    -moz-transform: translate(14px, 7px) scale(1) !important;
+    -ms-transform: translate(14px, 7px) scale(1) !important;
+    transform: translate(14px, 7px) scale(1) !important;
+}
+.small-ctr 
+.MuiOutlinedInput-adornedEnd {
+  padding-right: 0px !important;
+}
+.small-ctr .MuiSelect-select{
+  padding: 4.7px 14px !important;
+}
+
+.dx-datagrid .dx-row > td {
+  padding: 4px !important;
+  font-size: 0.8rem !important;
+}
+.MuiInputBase-root.Mui-disabled {
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+/* MUI Appbar Overrides */
+.white-appbar.MuiAppBar-root{
+  box-shadow: none !important;
+  color: currentColor ; 
+  background-color: #fff;
+}
+/* MUI Appbar Overrides */
+/*Control Specific*/
+
+body[dir="rtl"] .MuiIcon-root{
+  transform:  scaleX(-1);
+}

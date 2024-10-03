@@ -1,0 +1,107 @@
+{
+    "ver": "1.0.7",
+    "title": "Facts Eiffel",
+    "service": {
+      "url": "http://localhost/",
+      "auth": "oauth/token",
+      "report": "api/report",
+      "proc": "api/proc",
+      "authbody": {
+        "grant_type": "client_credentials",
+        "hash_method": "0",
+        "job_id": "ERP"
+      }
+    },
+    "upload": {
+      "url": "/FQAPI/",
+      "path": "api/file"
+    },
+    "login": {
+      "logo": "res/_original_images/loginpage.png",
+      "title": "Facts Eiffel",
+      "align": "center"
+    },
+    "whenload": [
+      {
+        "exec": "filldataset",
+        "args": {
+          "proc": "PWA.LoadLayout",
+          "args": {
+            "doctype": "part",
+            "docno": "global-parts"
+          },
+          "dset": "_pageparts",
+          "column": "layoutinfo"
+        }
+      }
+    ],
+    "whentimer": [
+      {
+        "interval": 15,
+        "tasks": [
+          {
+            "exec": "setdataset",
+            "args": {
+              "dset": "dsnotifs",
+              "data": null
+            }
+          },
+          {
+            "exec": "hideloader"
+          },
+          {
+            "exec": "fillmultidataset",
+            "args": {
+              "proc": "PWA.NotifMessages",
+              "dsets": [
+                {
+                  "name": "dsmessage",
+                  "table": "Table"
+                },
+                {
+                  "name": "dsmessagepopup",
+                  "table": "Table1"
+                },
+                {
+                  "name": "dsnotifs",
+                  "table": "Table2"
+                },
+                 {
+                  "name": "dstaskCount",
+                  "table": "Table3"
+                }
+              ],
+              "args": {}
+            }
+          },
+          {
+            "exec": "shownotification",
+            "args": {
+              "dset": "dsnotifs",
+              "args": {
+                "title": "[this.NOTIF_TITLE]",
+                "body": "[this.NOTIF_SUBTITLE]",
+                "whenclick": "[this.whenclick]"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "theme": {
+      "appbarClass" : "white-appbar", 
+      "header": "#041e42",
+      "palette": {
+        "primary": {
+          "main": "#041e42"
+        },
+        "secondary": {
+          "main": "#009688",
+          "contrastText" : "#fff"
+        }
+      },
+      "status": {
+        "danger": "orange"
+      }
+    }
+  }

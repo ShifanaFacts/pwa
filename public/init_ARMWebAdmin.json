@@ -1,0 +1,56 @@
+{
+    "ver": "1.0.7",
+    "title": "Facts PWA",
+    "service": {
+        "url": "/FQAPI/",
+        "auth": "oauth/token",
+         "report": "api/report",
+        "proc": "api/proc",
+        "authbody": {
+            "grant_type": "client_credentials",
+            "hash_method": "0",
+            "job_id": "SITEADMIN"
+        }
+    },
+    "upload": {
+        "url": "/FQAPI/",
+        "path": "api/file"
+    },
+    "login": {
+        "logo": "res/_original_images/loginpage.png",
+        "title": "Web Admin",
+        "align": "left", 
+        "style" : { 
+            "color" : "#b22124"
+        }
+    },
+    "whenload": [
+        {
+            "exec": "filldataset",
+            "args": {
+                "proc": "PWA.LoadLayout",
+                "args": {
+                    "doctype": "part",
+                    "docno": "global-parts"
+                },
+                "dset": "_pageparts",
+                "column": "layoutinfo"
+            }
+        }
+    ],
+    "whentimer": [],
+  "theme": {
+    "header": "#b22124",
+    "palette": {
+      "primary": {
+        "main": "#b22124"
+      },
+      "secondary": {
+        "main": "#b22124"
+      }
+    },
+    "status": {
+      "danger": "orange"
+    }
+  }
+}

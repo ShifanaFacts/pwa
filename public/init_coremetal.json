@@ -1,0 +1,118 @@
+{
+    "ver": "1.0.1",
+    "title": "Facts PWA",
+    "service": {
+        "url": "https://apiquery.factserp.com/",
+        "auth": "oauth/token",
+        "proc": "api/proc",
+        "authbody": {
+            "grant_type": "client_credentials",
+            "hash_method": "0",
+            "job_id": "1562"
+        }
+    },
+    "upload": {
+        "url": "https://apiquery.factserp.com/",
+        "path": "api/file"
+    },
+    "login": {
+        "logo": "res/_original_images/loginpage.png",
+        "title": "Facts PWA",
+        "align": "left"
+    },
+    "whenload": [
+        {
+            "exec": "filldataset",
+            "args": {
+                "proc": "PWA.LoadLayout",
+                "args": {
+                    "doctype": "part",
+                    "docno": "global-parts"
+                },
+                "dset": "_pageparts",
+                "column": "layoutinfo"
+            }
+        }
+    ],
+    "whentimer": [
+        {
+            "interval": 15,
+            "tasks": [
+                {
+                    "exec": "hideloader"
+                },
+                {
+                    "exec": "fillmultidataset",
+                    "args": {
+                        "proc": "PWA.NotifMessages",
+                        "dsets": [
+                            {
+                                "name": "dsmessage",
+                                "table": "Table"
+                            },
+                            {
+                                "name": "dsmessagepopup",
+                                "table": "Table1"
+                            },
+                            {
+                                "name": "dsnotifs",
+                                "table": "Table2"
+                            }
+                        ],
+                        "args": {}
+                    }
+                },
+                {
+                    "exec": "shownotification",
+                    "args": {
+                        "dset": "dsnotifs",
+                        "args": {
+                            "title": "[this.NOTIF_TITLE]",
+                            "body": "[this.NOTIF_SUBTITLE]",
+                            "whenclick": "[this.whenclick]"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "interval": 15,
+            "tasks": [
+                {
+                    "exec": "hideloader"
+                },
+                {
+                    "exec": "fillmultidataset",
+                    "args": {
+                        "proc": "PWA.GetUpdates",
+                        "dsets": [
+                            {
+                                "name": "local",
+                                "section": "appver",
+                                "table": "Table",
+                                "column": "latestv"
+                            }
+                        ],
+                        "args": {
+                            "localv": "[local.appver]"
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "theme": {
+        "header": "#3a62ab",
+        "palette": {
+            "primary": {
+                "main": "#3a62ab"
+            },
+            "secondary": {
+                "main": "#009688"
+            }
+        },
+        "status": {
+            "danger": "orange"
+        }
+    }
+}

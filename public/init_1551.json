@@ -1,0 +1,54 @@
+{
+    "ver": "1.0.1",
+    "title": "Facts PWA",
+    "service": {
+        "url": "https://apiquery.factserp.com/",
+        "auth": "oauth/token",
+        "proc": "api/proc",
+        "authbody": {
+            "grant_type": "client_credentials",
+            "hash_method": "0",
+            "job_id": "1551"
+        }
+    },
+    "upload": {
+        "url": "https://apiquery.factserp.com/",
+        "path": "api/file"
+    },
+    "login": {
+        "logo": "res/_original_images/loginpage.png",
+        "title": "Facts PWA",
+        "align": "left"
+    },
+    "whenload": [
+        {
+            "exec": "filldataset",
+            "args": {
+                "proc": "PWA.LoadLayout",
+                "args": {
+                    "doctype": "part",
+                    "docno": "global-parts"
+                },
+                "dset": "_pageparts",
+                "column": "layoutinfo"
+            }
+        }
+    ],
+    "whentimer": [
+  
+    ],
+    "theme": {
+        "header": "#3a62ab",
+        "palette": {
+            "primary": {
+                "main": "#3a62ab"
+            },
+            "secondary": {
+                "main": "#009688"
+            }
+        },
+        "status": {
+            "danger": "orange"
+        }
+    }
+}

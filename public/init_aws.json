@@ -1,0 +1,53 @@
+{
+    "ver": "1.0.8",
+    "title": "Facts PWA",
+    "service": {
+        "url": "https://aws.facts.ae/QueryAPI/",
+        "auth": "oauth/token",
+        "proc": "api/proc",
+        "report": "api/report",
+        "authbody": {
+            "grant_type": "client_credentials",
+            "hash_method": "0",
+            "job_id": "1805"
+        }
+    },
+    "upload": {
+        "url": "https://aws.facts.ae/QueryAPI/",
+        "path": "api/file"
+    },
+    "login": {
+        "logo": "res/_original_images/loginpage.png",
+
+        "align": "center"
+    },
+    "whenload": [
+        {
+            "exec": "filldataset",
+            "args": {
+                "proc": "PWA.LoadLayout",
+                "args": {
+                    "doctype": "part",
+                    "docno": "global-parts"
+                },
+                "dset": "_pageparts",
+                "column": "layoutinfo"
+            }
+        }
+    ],
+    "whentimer": [],
+    "theme": {
+        "header": "#ee1b24",
+        "palette": {
+            "primary": {
+                "main": "#0072b9"
+            },
+            "secondary": {
+                "main": "#0072b9"
+            }
+        },
+        "status": {
+            "danger": "orange"
+        }
+    }
+}

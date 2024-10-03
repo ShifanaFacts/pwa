@@ -1,0 +1,20 @@
+{
+    "mainfooter": [
+       {
+        "type": "div",
+        "props": {
+         
+            "style":{
+                "backgroundImage" : "url('https://cdn.britannica.com/38/227038-050-4FBE131C/Coloful-tulip-flowers.jpg')",
+                "backgroundSize" : "cover",
+                "position": "absolute",
+                "top": 0,
+                "width": "100vw",
+                "height" : "100vh",
+                "left": 0,
+                "zIndex": -99
+            }
+        }
+       }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+  "short_name": "FactsBUD-E",
+  "name": "FactsBUD-E",
+  "description": "Facts ERP PWA Version",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "res/_original_images/logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "res/_original_images/logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

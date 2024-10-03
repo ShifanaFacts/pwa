@@ -1,0 +1,15 @@
+
+.page-header{
+
+padding: 0px;
+} 
+
+.MuiToolbar-regular {
+  min-height: 40px !important; 
+}
+
+#dataGridContainer 
+.dx-datagrid-table 
+.dx-row 
+.dx-command-select 
+{width: 30px; min-width: 30px;}

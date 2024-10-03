@@ -1,0 +1,479 @@
+.login-container{
+  height: 100vh;
+}
+
+ .login-head{
+   border-radius: 5px;
+ }
+ 
+ .login-head *{
+  display: inline-block;
+  vertical-align: middle ;
+  color: #3a62ab;
+  font-weight: 600;
+  margin: 0px;
+  margin-left: 10px;
+  
+ }
+
+ .login-heading * {
+  padding-left: 30px;
+ }
+
+ @media only screen and (max-width: 1100px) {
+
+   .left {
+     width: 100vw !important;
+   }
+    .right {
+       display: none;
+     }
+     .logoImageClass {
+      height: 75px !important;
+     }
+ }
+
+ .left {
+  position: absolute;
+      top: 0;
+      left: 0;
+      width: 40%;
+      height: 100%;
+ }
+ 
+ .right {
+  position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100%;
+ }
+
+ .forgotPassClass{
+  text-align: right;
+ }
+
+ .numberBoxLabel>.dx-numberbox {
+   pointer-events: none;
+   background: none;
+ }
+
+ .login-card{
+   border: none !important;
+   overflow:visible !important;
+   padding-left: 30px;
+   padding-right: 30px;
+ }
+ 
+ .update-container{
+   text-align: right;
+   padding: 0px;
+ }
+.flex-grow{
+  flex-grow: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.app-drawer{
+  width: 240px;
+}
+.drawer-tool{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+.main-wrap{
+  display: flex;
+  flex-flow: column;
+  overflow: hidden;
+  height: 100vh;
+}
+
+ 
+.page-wrap{
+  flex-grow: 1;
+  overflow: auto;
+}
+ 
+ 
+.page-container{
+  flex-grow: 1;
+  overflow: auto;
+  align-items: flex-start;
+
+ }
+
+.fdatagrid-head{
+  background-color: gainsboro;
+}
+.expanel-details{
+  padding: 0px !important;
+}
+
+th, td {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tbcell {
+  padding: 5px;
+  white-space: break-spaces;
+  overflow-wrap: anywhere;
+}
+
+.tbcell.Default, .tbcell.Near{
+text-align: left;
+}
+.tbcell.Far,
+body[dir="rtl"] .tbcell{
+text-align: right;
+}
+.tbcell.Center{
+text-align: center;
+}
+
+.page-header{
+
+/* padding: 10px; */
+} 
+
+.drawer-list {
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.copyright{
+  font-size: 11px;
+  padding: 5px 5px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.copyright a{
+  text-decoration: none;
+  color: #315ba2;
+  font-weight: bold;
+  padding-left: 2px;
+}
+
+.copyright a:hover{
+  text-decoration: underline;
+}
+
+.cm-bubble{
+  font-size: 13px;
+  border: 1px solid #AED581;
+  padding: 7px;
+  background-color: #A5D6A7;
+  margin: 2px 5px !important;
+  border-radius: 10px;
+  display: flex;
+}
+.cm-bubble .icon{
+  color: #E91E63;
+}
+
+.facts-lookup,.facts-lookup * {
+  cursor: pointer; 
+}
+
+/* .app-drawer-width{
+  margin-left: 0;
+} */
+
+.chevdesign {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: row-reverse
+}
+
+/*Listview style - Custom */
+/* .dx-list-item,
+.lst-alt-red {
+  margin: 0px 5px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0px 5px;
+  border-radius: 4px;
+  cursor: pointer;
+} */
+/* .dx-list-item:nth-child(even), 
+.dx-list-next-button .dx-button,
+.lst-alt-red:nth-child(even){
+  background-color: #c62828;
+  color:white
+} */
+.dx-list .dx-empty-message, .dx-list-item-content{
+  padding-left: 20px !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+/*Listview style - Custom */
+
+
+/*MUI override */
+.MuiDialog-container {
+  background-color: #00000099;
+}
+ 
+
+/*MUI Override */ 
+
+ 
+.update-banner .content{
+  padding: 15px;
+}
+
+.update-banner .content .label{
+  font-size: 1.2rem;
+  padding-bottom: 10px;
+}
+
+.update-banner .content .button{
+  padding: 10px 50px;
+  background-color: #2196F3;
+  border: 1px solid white;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+
+/*Disable autofill color on webkit browsers */
+input:-webkit-autofill, 
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+/*Disable autofill color on webkit browsers */
+
+.list-active{
+  background-color: #009688;
+}
+
+.facts-multiFABDiv{
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.facts-multiFABDiv .MuiFab-root{
+  position: relative !important;
+  bottom: 0;
+  right: 0 ;
+  margin-bottom: 10px;
+}
+ 
+.facts-multiFABDiv .MuiFab-root:not(.MuiFab-extended){
+  width: 50px !important;
+  height: 50px !important;
+}
+.facts-multiFABDiv .facts-FABSubs
+{
+  display: flex;
+  flex-direction: column;
+  align-items:flex-end;
+}
+
+
+/* COMMON CSS STYLES TO BE USED WITH ANY CONTROLS*/
+
+.border-0{
+  border-radius: 0 !important;
+}
+.bg-silver{
+  background-color: silver !important;
+}
+/*END OF COMMON CSS STYLES TO BE USED*/
+
+
+/*** DESIGNER STYLES **/
+/* 
+.c-render .dz-ctr, 
+.c-render.dz-ctr{
+  box-shadow: 0px 0px 0px 1px silver !important;
+ }
+ .c-render .dz-ctr:hover,
+ .c-render.dz-ctr:hover  {
+  padding: 10px !important;
+  box-shadow: 0px 0px 0px 1px #F44336 !important;
+  outline: 1px dashed #fff !important;
+  overflow: visible !important;
+  content: ' '; 
+}
+
+.c-render .dz-ctr:hover > .dz-ctr,
+.c-render.dz-ctr:hover > .dz-ctr {
+  padding: 5px !important;
+  overflow: visible !important;
+}
+
+.c-render span.dz-ctr:hover:after,.c-render  .dz-ctr:hover > span.dz-ctr:after{
+  content: ' '; 
+  display: inline-block; 
+  width:20px;
+  height: 20px;
+}
+
+ 
+.dz-ctr .MuiIconButton-label:not(.dz-ctr), 
+.dz-ctr .MuiFormControl-root:not(.dz-ctr),
+.dz-ctr .MuiInputBase-root:not(.dz-ctr)
+{
+  pointer-events: none !important;
+}
+.dz-ctr .MuiTouchRipple-root{
+  display:none !important;
+}
+.dz-ctr .MuiButton-label{
+  padding: 0 !important; 
+}
+ 
+.c-render .dz-ctr, 
+.c-render.dz-ctr, 
+.dz-ctr  *
+{
+  cursor: pointer !important;
+}
+.c-render .dz-ctr.dz-active,
+.c-render.dz-ctr.dz-active  {
+  box-shadow: 0px 0px 0px 2px #E91E63 !important;
+  outline: 2px dashed #fff !important;
+  padding: 10px !important ;
+}
+
+.c-render, .c-preview{
+  box-shadow: 1px 1px 4px #adadad !important;
+  background-color: #fff;
+  padding: 10px;
+  overflow: auto;
+  height: 71vh;
+  overflow: auto !important;
+  position: relative;
+}
+.c-render > *, .c-preview > *{
+   background-color: white;
+}
+
+.c-render.dz-ctr:hover {
+  overflow: auto !important;
+} */
+
+/*** END OF DESIGNER STYLES **/
+
+
+
+
+/*** DESIGNER STYLES **/
+  
+.c-render th[data-ctr-class=dz-ctr], 
+.c-render tr[data-ctr-class=dz-ctr],
+.c-render tbody[data-ctr-class=dz-ctr], 
+.c-render thead[data-ctr-class=dz-ctr]
+  {
+  display:flex; 
+ }
+
+.c-render [data-ctr-class=dz-ctr], 
+.c-render[data-ctr-class=dz-ctr]{
+  box-shadow: 0px 0px 0px 1px silver !important;
+  min-width: 5px;
+  min-height: 5px;
+ }
+ .c-render [data-ctr-class=dz-ctr]:hover,
+ .c-render[data-ctr-class=dz-ctr]:hover  {
+  padding: 10px !important;
+  box-shadow: 0px 0px 0px 1px #F44336 !important;
+  outline: 1px dashed #fff !important;
+  overflow: visible !important;
+  content: ' '; 
+}
+
+.c-render [data-ctr-class=dz-ctr]:hover > [data-ctr-class=dz-ctr],
+.c-render[data-ctr-class=dz-ctr]:hover > [data-ctr-class=dz-ctr] {
+  padding: 5px !important;
+  overflow: visible !important;
+}
+
+.c-render span[data-ctr-class=dz-ctr]:hover:after,
+.c-render  [data-ctr-class=dz-ctr]:hover > span[data-ctr-class=dz-ctr]:after{
+  content: ' '; 
+  display: inline-block; 
+  width:20px;
+  height: 20px;
+}
+
+ 
+.c-render [data-ctr-class=dz-ctr] .MuiIconButton-label:not([data-ctr-class=dz-ctr]), 
+.c-render [data-ctr-class=dz-ctr] .MuiFormControl-root:not([data-ctr-class=dz-ctr]),
+.c-render [data-ctr-class=dz-ctr] .MuiInputBase-root:not([data-ctr-class=dz-ctr])
+{
+  pointer-events: none !important;
+}
+.c-render [data-ctr-class=dz-ctr] .MuiTouchRipple-root{
+  display:none !important;
+}
+.c-render [data-ctr-class=dz-ctr] .MuiButton-label{
+  padding: 0 !important; 
+}
+ 
+.c-render [data-ctr-class=dz-ctr], 
+.c-render[data-ctr-class=dz-ctr], 
+.c-render [data-ctr-class=dz-ctr]  *
+{
+  pointer-events: all !important;
+  cursor: pointer !important;
+}
+.c-render .dz-active[data-ctr-class=dz-ctr],
+.c-render.dz-active[data-ctr-class=dz-ctr]  {
+  box-shadow: 0px 0px 0px 2px #E91E63 !important;
+  outline: 2px dashed #fff !important;
+  padding: 10px !important ;
+}
+
+.c-render, .c-preview{
+  box-shadow: 1px 1px 4px #adadad !important;
+  background-color: #fff;
+  padding: 10px;
+  overflow: auto;
+  height: 71vh;
+  overflow: auto !important;
+  position: relative;
+}
+/* .c-render > *, .c-preview > *{
+   background-color: white;
+} */
+
+.c-render[data-ctr-class=dz-ctr]:hover {
+  overflow: auto !important;
+}
+
+
+.c-render .muiTabContent *, 
+.c-render [data-ctr-class=dz-ctr] .MuiIconButton-label:not([data-ctr-class=dz-ctr]), 
+.c-render [data-ctr-class=dz-ctr] .MuiFormControl-root:not([data-ctr-class=dz-ctr]),
+.c-render [data-ctr-class=dz-ctr] .MuiInputBase-root:not([data-ctr-class=dz-ctr])
+{
+  pointer-events: none !important;
+}
+/*** END OF DESIGNER STYLES **/
+
+
+.multi-select-ddl-item{
+  display: inline-block;
+  padding: 0px 12px;
+  border-radius: 15px;
+  background-color: #EFEFEF;
+  margin: 0px 2px;
+  border: 1px solid gainsboro;
+  font-size: 0.9rem;
+}

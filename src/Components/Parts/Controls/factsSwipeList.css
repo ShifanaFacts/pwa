@@ -1,0 +1,115 @@
+
+.swplist{
+    cursor: pointer;
+    border-bottom: 1px solid gainsboro; 
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.swplist *{
+  padding: 0px;
+  margin: 0px;
+}
+
+
+
+.swplist.content .handle{
+  width: 20px; 
+  min-width: 20px;
+}
+
+.swplist.content .handle.left{
+  background-color: #E91E63;
+}
+
+.swplist.content .handle.right{
+  background-color: #009688; 
+}
+
+.swplist.content .box, .swplist.content .header, .swplist.content .footer{
+  flex-grow: 1;
+  flex-shrink: 1; 
+  display: flex;
+}
+.swplist.content .box{
+  flex-direction: column;
+  padding:  5px;
+
+}
+
+.swplist.content .header
+{  
+  flex-direction: row;
+  width: 100%;
+}
+
+.swplist.content .header .title{
+  flex-grow: 1;
+  flex-shrink: 1;
+  font-size: 1em;
+  font-weight: bold;
+  padding-top: 10px;
+  white-space:pre-wrap;
+}
+
+.swplist.content .subtitle
+{  
+  font-size: 0.85em;
+  color: #333;
+}
+
+.swplist.content .excerpt
+{  
+  font-size: 0.7em;
+  color: #333;
+}
+.swplist.content .footer
+{  
+    padding-top: 10px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+
+
+
+
+.swplist.left,.swplist.right {
+  color: #fff;
+  display: table;
+  height: inherit;
+  padding: 5px;
+
+ }
+
+.swplist.left {
+  background-color: #E91E63;
+ }
+
+ .swplist.right {
+  background-color: #009688;
+  text-align: right;
+ }
+
+ .swplist.left span,.swplist.right span{
+   display: table-cell;
+   vertical-align: middle;
+ }
+
+ .top-content{
+   flex-grow: 1;
+ }
+ .top-buttons{
+   min-width: 20vw;
+   text-align: right;
+ }
+
+.top-buttons .MuiBadge-badge{
+  background-color: #E91E63;
+}
+ 
+.top-buttons .icon{
+  color: #455A64;
+}
+ 

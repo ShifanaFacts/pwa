@@ -1,0 +1,81 @@
+{
+  "ver": "1.0.17",
+  "title": "Facts PWA",
+  "stylekey": "win",
+  "service": {
+    "url": "https://demo.facts.ae/FQAPI/",
+    "auth": "oauth/token",
+    "report": "api/report",
+    "xlupload": "api/excel/upload",
+    "xltemplate": "api/excel/template",
+    "proc": "api/proc",
+    "identityserverPath": "https://localhost:44372/account/signin-microsoft",
+    "authbody": {
+      "grant_type": "client_credentials",
+      "hash_method": "0",
+      "job_id": "1696"
+    }
+  },
+  "upload": {
+    "url": "https://demo.facts.ae/FQAPI/",
+    "path": "api/file"
+  },
+  "login": {
+    "logo": "res/_original_images/loginpage.png",
+    "title": "",
+    "align": "center"
+  },
+  "whenload": [
+    {
+      "exec": "filldataset",
+      "args": {
+        "proc": "PWA.LoadLayout",
+        "args": {
+          "doctype": "event",
+          "docno": "init-whenload-events"
+        },
+        "dset": "dsWhenload",
+        "column": "layoutinfo",
+        "controller": "unproc"
+      }
+    },
+    "[dsWhenload]"
+  ],
+  "whenappinit": [
+    {
+      "exec": "filldataset",
+      "args": {
+        "proc": "PWA.LoadLayout",
+        "args": {
+          "doctype": "event",
+          "docno": "init-whenappinit-events"
+        },
+        "dset": "dsWhenAppInit",
+        "column": "layoutinfo",
+        "controller": "unproc"
+      }
+    },
+    "[dsWhenAppInit]"
+  ],
+  "whentimer": [
+    {
+      "interval": 15,
+      "tasks": ["[dsWhenTimer]"]
+    }
+  ],
+  "theme": {
+    "appbarClass": "app-drawer-main",
+    "palette": {
+      "mode": "light",
+      "primary": {
+        "main": "#0b3eaf"
+      },
+      "secondary": {
+        "main": "#f2f2f7"
+      }
+    },
+    "status": {
+      "danger": "orange"
+    }
+  }
+}

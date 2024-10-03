@@ -1,0 +1,37 @@
+{
+    "ver": "1.0.7",
+    "title": "Dicetek",
+    "service": {
+        "url": "https://apiquery.factserp.com/",
+        "auth": "oauth/token",
+        "proc": "api/proc",
+        "authbody": {
+            "grant_type": "client_credentials",
+            "hash_method": "1",
+            "job_id": "1409"
+        }
+    },
+    "upload": {
+        "url": "https://apiquery.factserp.com/",
+        "path": "api/file"
+    },
+    "login": {
+        "logo": "res/loginpage.png",
+        "title": null,
+        "align": "center"
+    },
+    "theme": {
+        "header": "#c62828",
+        "palette": {
+            "primary": {
+                "main": "#c62828"
+            },
+            "secondary": {
+                "main": "#f50057"
+            }
+        },
+        "status": {
+            "danger": "orange"
+        }
+    }
+}

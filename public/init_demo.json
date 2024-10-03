@@ -1,0 +1,65 @@
+{
+  "ver": "1.0.7",
+  "title": "Facts PWA",
+  "service": {
+    "url": "https://demo.facts.ae/FQAPI/",
+    "auth": "oauth/token",
+    "report": "api/report",
+    "proc": "api/proc",
+    "authbody": {
+      "grant_type": "client_credentials",
+      "hash_method": "0",
+      "job_id": "1696"
+    }
+  }, 
+  "upload": {
+    "url": "https://demo.facts.ae/FQAPI/",
+    "path": "api/file"
+  },
+  "login": {
+    "logo": "res/_original_images/loginpage.png",
+    "title": "",
+    "align": "center"
+  },
+  "whenload": [
+    {
+      "exec": "filldataset",
+      "args": {
+        "proc": "PWA.LoadLayout",
+        "args": {
+          "doctype": "part",
+          "docno": "global-parts"
+        },
+        "dset": "_pageparts",
+        "column": "layoutinfo"
+      }
+    }
+  ],
+  "whenappinit": [
+    {
+      "exec": "setdataset",
+      "args": {
+        "dset": "dsPrimaryColor",
+        "data": {
+          "primary_color": "#16A085",
+          "secondary_color": "#566573"
+        }
+      }
+    }
+  ],
+  "whentimer": [],
+  "theme": {
+    "header": "#FDFEFE",
+    "palette": {
+      "primary": {
+        "main": "#16A085"
+      },
+      "secondary": {
+        "main": "#566573"
+      }
+    },
+    "status": {
+      "danger": "orange"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+    "offline" : true,
+    "ver": "1.0.7",
+    "title": "Facts PWA",
+    "service": {
+        "url": "https://jackson.facts.ae/FQAPI/",
+        "auth": "oauth/token",
+         "report": "api/report",
+        "proc": "api/proc",
+        "authbody": {
+            "grant_type": "client_credentials",
+            "hash_method": "0",
+            "job_id": "1789"
+        }
+    },
+    "upload": {
+        "url": "https://jackson.facts.ae/FQAPI/",
+        "path": "api/file"
+    },
+    "login": {
+        "logo": "res/_original_images/loginpage.png",
+        "title": "Facts PWA",
+        "align": "left"
+    },
+    "whenload": [
+        {
+            "exec": "filldataset",
+            "args": {
+                "proc": "PWA.LoadLayout",
+                "args": {
+                    "doctype": "part",
+                    "docno": "global-parts"
+                },
+                "dset": "_pageparts",
+                "column": "layoutinfo"
+            }
+        }
+    ],
+    "whentimer": [],
+    "theme": {
+        "header": "#977423",
+        "palette": {
+            "primary": {
+                "main": "#977423"
+            },
+            "secondary": {
+                "main": "#009688"
+            }
+        },
+        "status": {
+            "danger": "orange"
+        }
+    }
+}

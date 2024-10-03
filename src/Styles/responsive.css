@@ -1,0 +1,144 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .hide-on-xs{
+        display: none;
+    }
+    .show-on-xs{
+        display:inherit;
+    }
+  
+
+    .fcx100{
+        width: 100%;
+    }
+    .fcx75{
+        width: 75%;
+    }
+    .fcx50{
+        width: 50%;
+    }
+    .fcx25{
+        width: 25%;
+    }
+    .lvlist.xs-shrink{
+        overflow: auto;
+        display: inline-block;
+        white-space: nowrap;
+        width: 100vw;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .hide-on-sm{
+        display: none;
+    }
+    .show-on-sm{
+        display:inherit;
+    }
+   
+    .fcm100{
+        width: 100%;
+    }
+    .fcm75{
+        width: 75%;
+    }
+    .fcm50{
+        width: 50%;
+    }
+    .fcm25{
+        width: 25%;
+    }
+
+  
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    /* scrollbar*/
+   /* *{
+        scrollbar-color: gainsboro silver;
+    } */
+
+    /*! Other Browser */
+    /* ::-webkit-scrollbar {
+        width: 11px;
+        height: 11px;
+    } 
+    ::-webkit-scrollbar-track {
+        background: gainsboro;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: silver;
+        border-radius: 6px;
+        border: 1px solid gainsboro;
+    } */
+    /* scrollbar*/
+
+    .hide-on-md{
+        display: none;
+    }
+    .show-on-md{
+        display:inherit;
+    }
+   
+  
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .hide-on-lg{
+        display: none;
+    }
+    .show-on-lg{
+        display:inherit;
+    }
+   
+    .fcl100{
+        width: 100%;
+    }
+    .fcl75{
+        width: 75%;
+    }
+    .fcl50{
+        width: 50%;
+    }
+    .fcl25{
+        width: 25%;
+    }
+
+    /*Firefox scrollbar customization*/
+  /* * {
+    scrollbar-width: thin;
+    scrollbar-color:  #AAA #f1f1f1;
+  } */
+  /*Webkit scrollbar customization */
+  /* ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #AAA; 
+   }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #888; 
+  } */
+  /*Webkit scrollbar customization */
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .hide-on-xl{
+        display: none;
+    }
+    .show-on-xl{
+        display:inherit;
+    }
+   
+}
+
+ 

@@ -1,0 +1,169 @@
+{
+
+  "ver": "1.0.11",
+ "debugstate" : true,
+"offline" : true,
+  "title": "Mirajkar",
+  "service": {
+    "url": "https://mirajkar.facts.ae/FQAPI/",
+    "auth": "oauth/token",
+    "proc": "api/proc",
+    "report": "api/report",
+    "authbody": {
+      "grant_type": "client_credentials",
+      "hash_method": "2",
+      "job_id": "1954"
+    }
+  },
+  "upload": {
+    "url": "/FQAPI/",
+    "path": "api/file"
+  },
+  "login": {
+    "logo": "res/_original_images/loginpage.png?ver=1.0",
+    "title": "",
+    "align": "center",
+    "boxstyle": {
+      "background" : "transparent"
+    }
+  },
+  "whenload": [
+    {
+      "exec": "filldataset",
+      "args": {
+        "proc": "PWA.LoadLayout",
+        "args": {
+          "doctype": "part",
+          "docno": "global-parts"
+        },
+        "dset": "_pageparts",
+        "column": "layoutinfo"
+      }
+    }
+  ],
+"whenappinit": [
+      {
+          "exec": "validatedataset",
+          "verify": {
+              "satisfy": "all",
+              "halton": "match",
+              "ref": {
+                  "[url.1(ifnull)raw.(eq)raw.(iffalse)raw.OK]": "OK",
+                  "[url.2(ifnull)raw.(eq)raw.(iffalse)raw.OK]": "OK"
+              },
+              "whenmatch": [
+                  {
+                      "exec": "debuglog",
+                      "input": "[url.2]"
+                  },
+                  {
+                      "exec": "filldataset",
+                      "args": {
+                          "proc": "PWA.LoadLayout",
+                          "dset": "popupinfo",
+                          "ignoreempty" : true,
+                          "section": "testreport",
+                          "column": "layoutinfo",
+                          "controller": "/FQAPI/api/unproc",
+                          "args": {
+                              "doctype": "test",
+                              "docno": "report"
+                          }
+                      }
+                  }
+              ]
+          }
+      }
+  ],
+  "whentimer": [
+    {
+      "interval": 15,
+      "tasks": [
+  {
+    "exec": "setdataset",
+    "args": {
+      "dset": "dsnotifs",
+      "data": null
+    }
+  },
+        {
+          "exec": "hideloader"
+        },
+        {
+          "exec": "fillmultidataset",
+          "args": {
+            "proc": "PWA.NotifMessages",
+            "dsets": [
+              {
+                "name": "dsmessage",
+                "table": "Table"
+              },
+              {
+                "name": "dsmessagepopup",
+                "table": "Table1"
+              },
+              {
+                "name": "dsnotifs",
+                "table": "Table2"
+              }
+            ],
+            "args": {}
+          }
+        },
+        {
+          "exec": "shownotification",
+          "args": {
+            "dset": "dsnotifs",
+            "args": {
+              "title": "[this.NOTIF_TITLE]",
+              "body": "[this.NOTIF_SUBTITLE]",
+              "whenclick": "[this.whenclick]"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "interval": 15,
+      "tasks": [
+        {
+          "exec": "hideloader"
+        },
+        {
+          "exec": "fillmultidataset",
+          "args": {
+            "proc": "PWA.GetUpdates",
+            "dsets": [
+              {
+                "name": "local",
+                "section": "appver",
+                "table": "Table",
+                "column": "latestv"
+              }
+            ],
+            "args": {
+              "localv": "[local.appver]"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "theme": {
+    "header": "#25833c",
+    "palette": {
+      "primary": {
+        "main": "#25833c"
+      },
+      "secondary": {
+        "main": "#8bc43f"
+      },
+     "tertiary": {
+        "main": "red"
+      }
+    },
+    "status": {
+      "danger": "orange"
+    }
+  }
+}

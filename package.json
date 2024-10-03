@@ -1,0 +1,82 @@
+{
+  "name": "pwa-2k23",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^40.0.0",
+    "@ckeditor/ckeditor5-react": "^6.1.0",
+    "@devexpress/dx-react-chart-material-ui": "^4.0.5",
+    "@devexpress/dx-react-scheduler": "^2.7.5",
+    "@devexpress/dx-react-scheduler-material-ui": "^2.7.5",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/icons-material": "^5.16.7",
+    "@mui/lab": "^5.0.0-alpha.67",
+    "@mui/material": "^5.4.0",
+    "@mui/styles": "^5.3.0",
+    "@sandstreamdev/react-swipeable-list": "^0.4.1",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "date-fns": "^2.22.1",
+    "devextreme": "22.2.6",
+    "devextreme-react": "22.2.6",
+    "jss-rtl": "^0.3.0",
+    "moment-timezone": "^0.5.43",
+    "query-string": "^8.1.0",
+    "react": "^18.2.0",
+    "react-canvas-draw": "^1.2.1",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-qr-barcode-scanner": "^1.0.6",
+    "react-qr-reader": "^2.2.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "5.0.1",
+    "react-sketch-canvas": "^6.2.0",
+    "react-virtualized-auto-sizer": "^1.0.5",
+    "react-webcam-barcode-scanner": "^0.0.2-rc2",
+    "react-window": "^1.8.6",
+    "react-zxing": "^2.0.0",
+    "rrule": "^2.7.2",
+    "web-vitals": "^2.1.4",
+    "workbox-background-sync": "^6.6.0",
+    "workbox-broadcast-update": "^6.6.0",
+    "workbox-cacheable-response": "^6.6.0",
+    "workbox-core": "^6.6.0",
+    "workbox-expiration": "^6.6.0",
+    "workbox-google-analytics": "^6.6.0",
+    "workbox-navigation-preload": "^6.6.0",
+    "workbox-precaching": "^6.6.0",
+    "workbox-range-requests": "^6.6.0",
+    "workbox-routing": "^6.6.0",
+    "workbox-strategies": "^6.6.0",
+    "workbox-streams": "^6.6.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "SET NODE_OPTIONS=--max-old-space-size=4096 && react-scripts build && current_sw_version.bat",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  }
+}
